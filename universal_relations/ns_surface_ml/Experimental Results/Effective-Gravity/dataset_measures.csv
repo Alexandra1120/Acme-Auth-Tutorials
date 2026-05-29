@@ -1,0 +1,2 @@
+explained_variance,max_error,mean_absolute_error,mean_squared_error,r2_score,mean_absolute_percentage_error,eval_eos_type,eval_eos_name
+0.9999923706054688,0.007730305,0.00033790476,4.5123522e-07,0.9999923718381485,0.00034356557,,

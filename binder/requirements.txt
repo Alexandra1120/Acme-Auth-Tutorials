@@ -1,0 +1,45 @@
+# Python dependencies for ACME Tutorials.
+# Binder uses environment.yml; this file is kept for reference.
+
+# Core scientific packages
+numpy==1.25
+scipy>=1.8
+matplotlib>=3.5,<3.9
+pandas>=1.4
+xarray
+astropy
+
+# Data handling
+h5py>=3.6
+
+# Jupyter ecosystem
+jupyterlab
+ipykernel
+ipywidgets>=8.0
+notebook<7.0
+
+# Eryn tutorial packages
+corner
+eryn
+gbgpu
+ellc
+tqdm
+tables
+sympy
+
+# GWG tutorial packages
+gpubackendtools
+git+https://github.com/mikekatz04/LISAanalysistools.git
+git+https://gitlab.in2p3.fr/Nikos/gwg.git
+whittaker-eilers
+fastgb
+
+# Universal Relations tutorial packages
+scikit-learn
+torch
+torchvision
+torchmetrics
+mlxtend
+torchinfo
+seaborn
+joblib

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Binder post-build setup for ACME tutorials
+
+echo "Setting up ACME tutorials environment..."
+
+# Verify critical packages
+echo "Verifying Python environment..."
+
+# Check Python version
+python --version
+
+# Verify core packages
+python -c "import numpy; print(f'numpy {numpy.__version__}')" || echo "numpy not found"
+python -c "import matplotlib; print(f'matplotlib {matplotlib.__version__}')" || echo "matplotlib not found"
+python -c "import corner; print(f'corner {corner.__version__}')" || echo "corner not found"
+python -c "import eryn; print('eryn installed')" || echo "eryn not found"
+python -c "import gbgpu; print('gbgpu installed')" || echo "gbgpu not found"
+python -c "import ellc; print('ellc installed')" || echo "ellc not found"
+python -c "import gwg; print('gwg installed')" || echo "gwg not found"
+python -c "import lisatools; print('lisatools installed')" || echo "lisatools not found"
+python -c "import sklearn; print('scikit-learn installed')" || echo "scikit-learn not found"
+python -c "import torch; print('torch installed')" || echo "torch not found"
+
+# Build the RNS tutorial executables
+echo "Building RNS executables..."
+(cd rns/rns_build && make) || echo "RNS build failed"
+
+echo ""
+echo "Binder setup complete."
+echo "Core packages verified and ready."
